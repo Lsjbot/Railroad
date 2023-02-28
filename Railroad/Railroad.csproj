@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C903FDE6-6E5F-4683-988C-A72DBC2E6BDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Railroad</RootNamespace>
+    <AssemblyName>Railroad</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomaticGraphLayout, Version=0.0.0.0, Culture=neutral, PublicKeyToken=6baa2c1345e83b6e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutomaticGraphLayout.1.1.11\lib\netstandard2.0\AutomaticGraphLayout.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=640c57aa40e7ae7d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.1.1.3\lib\net40\Microsoft.Msagl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.Drawing, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8a3d7c21d5fa1306, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.Drawing.1.1.3\lib\net40\Microsoft.Msagl.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.GraphViewerGdi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=fffc27ea4058b3a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.GraphViewerGDI.1.1.3\lib\net40\Microsoft.Msagl.GraphViewerGdi.dll</HintPath>
+    </Reference>
+    <Reference Include="QuikGraph, Version=2.3.0.0, Culture=neutral, PublicKeyToken=46bd58b0789759cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuikGraph.2.3.0\lib\net45\QuikGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuikGraph.MSAGL, Version=2.3.0.0, Culture=neutral, PublicKeyToken=46bd58b0789759cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuikGraph.MSAGL.2.3.0\lib\netstandard2.0\QuikGraph.MSAGL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buildingclass.cs" />
+    <Compile Include="carclass.cs" />
+    <Compile Include="cargoclass.cs" />
+    <Compile Include="cartypeclass.cs" />
+    <Compile Include="cityclass.cs" />
+    <Compile Include="edgeclass.cs" />
+    <Compile Include="engineclass.cs" />
+    <Compile Include="enginetypeclass.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormItinerary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItinerary.Designer.cs">
+      <DependentUpon>FormItinerary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainmap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainmap.Designer.cs">
+      <DependentUpon>FormMainmap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMapgenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMapgenerator.Designer.cs">
+      <DependentUpon>FormMapgenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewtrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewtrain.Designer.cs">
+      <DependentUpon>FormNewtrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRailselect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRailselect.Designer.cs">
+      <DependentUpon>FormRailselect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrainlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrainlist.Designer.cs">
+      <DependentUpon>FormTrainlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hgtclass.cs" />
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mapclass.cs" />
+    <Compile Include="Msg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Msg.Designer.cs">
+      <DependentUpon>Msg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nodeclass.cs" />
+    <Compile Include="nodetypeclass.cs" />
+    <Compile Include="playerclass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="railclass.cs" />
+    <Compile Include="railgraphclass.cs" />
+    <Compile Include="riverclass.cs" />
+    <Compile Include="squareclass.cs" />
+    <Compile Include="squaretrackclass.cs" />
+    <Compile Include="stationclass.cs" />
+    <Compile Include="templateclass.cs" />
+    <Compile Include="terrainclass.cs" />
+    <Compile Include="trackconnectionclass.cs" />
+    <Compile Include="trainclass.cs" />
+    <Compile Include="trainposclass.cs" />
+    <Compile Include="util.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItinerary.resx">
+      <DependentUpon>FormItinerary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainmap.resx">
+      <DependentUpon>FormMainmap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMapgenerator.resx">
+      <DependentUpon>FormMapgenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewtrain.resx">
+      <DependentUpon>FormNewtrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRailselect.resx">
+      <DependentUpon>FormRailselect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrainlist.resx">
+      <DependentUpon>FormTrainlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Msg.resx">
+      <DependentUpon>Msg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
